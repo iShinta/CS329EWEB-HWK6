@@ -32,18 +32,19 @@
 		captions[7] = "sun_temple";
 		captions[8] = "taj_mahal";
 		captions[9] = "victoria_memorial";
-		index = Math.floor(Math.random() * images.length);
-		document.writeln("<figure>");
-		document.writeln("<img id=\"\" src=\"" + images[index] + "\" title=\"Travel\" alt=\"" + captions[index] + "\" />");
-		document.writeln("<br /><br />");
-		document.writeln("<legend>");
-		document.writeln(captions[index]);
-		document.writeln("</legend>");
-		document.writeln("</figure>");
+		index = 0;
+		document.writeln("<p id=\"pic\">")
+		document.writeln("<img src=\"" + images[index] + "\" title=\"Travel\" alt=\"" + captions[index] + "\" />");
+		document.writeln("</p>");
 
 		setInterval(function(){
-			location.reload();
+			if(index++ == images.length){
+				index = 0;
+			}
+			document.getElementById("pic").innerHTML = "<img src=\"" + images[index] + "\" title=\"Travel\" alt=\"" + captions[index] + "\" />";
 		}, 3000);
+
+
 	-->
 	</script>
 </body>
