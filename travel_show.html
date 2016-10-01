@@ -38,7 +38,7 @@
 		document.writeln("</p>");
 
 		setInterval(function(){
-			if(index++ == images.length){
+			if(++index == images.length){
 				index = 0;
 			}
 			document.getElementById("pic").innerHTML = "<img src=\"" + images[index] + "\" title=\"Travel\" alt=\"" + captions[index] + "\" />";
